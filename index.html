@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo Virtual de Alerrandro</title>
+
+    <style>
+        /* cor do fundo, das fontes, e da centralização da página*/
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s;
+        }
+
+        /* o cabeçalho */
+        header {
+            background-color: #1b3a5c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* a foto redonda */
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        /* nome */
+        header h1 {
+            font-size: 26px;
+            margin-top: 10px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #a8c8e8;
+        }
+
+        /* cada bloco */
+        .secao {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #1b3a5c;
+        }
+
+        /* título de cada bloco */
+        .secao h2 {
+            font-size: 18px;
+            color: #1b3a5c;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 8px;
+        }
+
+        /* listas dentro dos blocos */
+        .secao ul, .secao ol {
+            padding-left: 20px;
+        }
+
+        .secao li {
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #000000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eeeeee;
+            color: #000000;
+        }
+
+        /* coluna do rótulo */
+        table td:first-child {
+            font-weight: bold;
+            color: #1b3a5c;
+            width: 100px;
+        }
+
+        /* estilo dos links */
+        a {
+            color: #2e7daf;
+            text-decoration: none;
+        }
+
+        /* sublinha o link */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* área dos botões centralizada */
+        .botoes {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* estilo dos botões */
+        .botoes button {
+            padding: 8px 20px;
+            margin: 5px;
+            font-size: 14px;
+            border: 2px solid #1b3a5c;
+            background-color: white;
+            color: #1b3a5c;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* função que faz o botão mudar de cor ao passar o mouse */
+        .botoes button:hover {
+            background-color: #1b3a5c;
+            color: white;
+        }
+
+        /* o sol */
+        .sol {
+            width: 60px;
+            height: 60px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            opacity: 1;
+            transition: opacity 0.3s;
+            box-shadow: 0 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* a lua */
+        .lua {
+            width: 60px;
+            height: 60px;
+            background-color: #F0E68C;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: -15px 0 0 -5px #1a1a2e;
+        }
+
+        .tema {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+        }
+
+        /* modo dark */
+        body.dark-mode {
+            background-color: #1a1a2e;
+        }
+
+        body.dark-mode .sol {
+            opacity: 0;
+        }
+
+        body.dark-mode .lua {
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- sol e a lua -->
+    <div class="tema">
+        <div class="sol"></div>
+        <div class="lua"></div>
+    </div>
+
+    <header>
+        <img src="foto.jfif" alt="Foto de perfil">
+        <h1>Alerrandro Fonseca Andrade</h1>
+        <p>Cursando Sistema de Informação</p>
+    </header>
+
+<div class="secao">
+    <h2>Habilidades</h2>
+    <ul>
+        <li>HTML e CSS - básico</li>
+        <li>Inglês técnico - leitura básica</li>
+        <li>Python - básico</li>
+    </ul>
+</div>
+
+<div class="secao">
+    <h2>Objetivos</h2>
+    <ul>
+        <li>Atuar na área de cybersegurança</li>
+        <li>Aplicar os conhecimentos do curso na prática</li>
+        <li>Crescer profissionalmente na área de tecnologia e trabalhar para o exterior</li>
+        <li>Incorporar IA no meu dia a dia para aumentar produtividade e eficiência técnica</li>
+    </ul>
+</div>
+
+    <div class="secao">
+        <h2>Contato</h2>
+        <table>
+            <tr>
+                <td>Celular</td>
+                <td>(73) 9 8256-0547</td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td>alerrandrofonseca379@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- temas -->
+    <div class="botoes">
+        <button onclick="modoDark()">Modo Escuro</button>
+        <button onclick="modoWhite()">Modo Claro</button>
+    </div>
+
+    <script>
+        /* muda pro modo escuro */
+        function modoDark() {
+            document.body.classList.add('dark-mode');
+        }
+
+        /* volta pro modo claro */
+        function modoWhite() {
+            document.body.classList.remove('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
